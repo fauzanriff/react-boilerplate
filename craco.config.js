@@ -13,4 +13,11 @@ module.exports = {
       return webpackConfig;
     },
   },
+  jest: {
+    configure: {
+      setupFilesAfterEnv: [
+        '<rootDir>/src/setupTests.js',
+      ],
+    },
+  },
 };
