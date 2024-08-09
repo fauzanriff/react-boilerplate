@@ -1,8 +1,12 @@
+const path = require('path');
 const webpack = require('webpack');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   webpack: {
+    alias: {
+      '@': path.resolve(__dirname, 'src'),
+    },
     configure: (webpackConfig) => {
       webpackConfig.plugins.push(
         new webpack.EnvironmentPlugin({
